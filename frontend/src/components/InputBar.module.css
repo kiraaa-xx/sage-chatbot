@@ -1,0 +1,199 @@
+.container {
+  position: fixed;
+  bottom: 0; left: 280px; right: 0;
+  padding: 12px 20px 16px;
+  background: var(--bg-primary);
+  background: linear-gradient(to top, var(--bg-primary) 70%, transparent);
+  z-index: 20;
+  transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Adjust when sidebar is closed — handled via CSS var fallback on App level 
+   We keep left: 280px as sidebar handles margin */
+
+.inputWrap {
+  max-width: 720px;
+  margin: 0 auto;
+  background: var(--input-bg);
+  border: 1.5px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow-md);
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.inputWrap:focus-within {
+  border-color: var(--sage-1);
+  box-shadow: 0 0 0 3px var(--sage-glow), var(--shadow-md);
+}
+
+.dragging {
+  border-color: var(--sage-2);
+  box-shadow: 0 0 0 4px var(--sage-glow-strong);
+  transform: scale(1.01);
+}
+
+.hasImage {
+  border-radius: 18px;
+}
+
+/* Image strip */
+.imageStrip {
+  padding: 12px 14px 0;
+  animation: fadeIn 0.2s ease;
+}
+
+.imagePreviewWrap {
+  position: relative;
+  display: inline-block;
+}
+
+.imagePreview {
+  width: 80px; height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid var(--border);
+}
+
+.removeImg {
+  position: absolute;
+  top: -6px; right: -6px;
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  background: #e05050;
+  border: none;
+  color: white;
+  font-size: 10px;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: transform 0.15s;
+}
+.removeImg:hover { transform: scale(1.15); }
+
+.visionBadge {
+  position: absolute;
+  bottom: -6px; left: 50%;
+  transform: translateX(-50%);
+  background: var(--sage-1);
+  color: white;
+  font-size: 9px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 100px;
+  white-space: nowrap;
+  letter-spacing: 0.04em;
+}
+
+/* Input row */
+.inputRow {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  padding: 10px 10px 10px 14px;
+}
+
+.attachBtn {
+  width: 38px; height: 38px;
+  border-radius: 10px;
+  background: transparent;
+  border: 1px solid var(--border);
+  font-size: 17px;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.2s;
+  color: var(--text-muted);
+}
+.attachBtn:hover {
+  background: var(--bg-hover);
+  border-color: var(--sage-1);
+  transform: scale(1.05);
+}
+.attachActive {
+  background: rgba(132,177,121,0.12);
+  border-color: var(--sage-1);
+}
+.attachBtn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.textarea {
+  flex: 1;
+  background: none;
+  border: none;
+  outline: none;
+  resize: none;
+  font-family: 'Outfit', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-primary);
+  max-height: 160px;
+  overflow-y: auto;
+  padding: 5px 0;
+}
+.textarea::placeholder { color: var(--text-placeholder); }
+.textarea:disabled { opacity: 0.5; }
+
+.sendBtn {
+  width: 42px; height: 42px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--sage-1), var(--sage-2));
+  border: none;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px var(--sage-glow);
+  transition: all 0.2s;
+}
+.sendBtn:hover:not(:disabled) {
+  transform: scale(1.08) translateY(-1px);
+  box-shadow: 0 6px 18px var(--sage-glow-strong);
+}
+.sendBtn:active:not(:disabled) {
+  transform: scale(0.96);
+}
+.sendDisabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.sendSpinner {
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  border: 2.5px solid rgba(255,255,255,0.3);
+  border-top-color: white;
+  animation: spin 0.7s linear infinite;
+  display: block;
+}
+
+/* Drag overlay */
+.dropOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(132,177,121,0.12);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  pointer-events: none;
+}
+
+.dropText {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--sage-1);
+  animation: float 1s ease-in-out infinite;
+}
+
+.hint {
+  max-width: 720px;
+  margin: 6px auto 0;
+  text-align: center;
+  font-size: 10.5px;
+  color: var(--text-muted);
+  opacity: 0.65;
+  letter-spacing: 0.02em;
+}
+
+.dropIcon { font-size: 28px; color: var(--sage-1); margin-bottom: 6px; animation: float 1s ease-in-out infinite; }

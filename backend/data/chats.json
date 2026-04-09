@@ -1,0 +1,71 @@
+{
+  "chats": {
+    "2341affd-9bdf-4b7d-ab41-aa02ff18fb3f": {
+      "id": "2341affd-9bdf-4b7d-ab41-aa02ff18fb3f",
+      "title": "Who Are You",
+      "createdAt": "2026-04-09T13:30:39.489Z",
+      "updatedAt": "2026-04-09T13:31:03.138Z",
+      "messages": [
+        {
+          "id": "c46d3639-299a-4952-b5dc-80056af6c3a1",
+          "role": "user",
+          "content": "what is your name?",
+          "hasImage": false,
+          "imageData": null,
+          "imageMime": null,
+          "timestamp": "2026-04-09T13:31:02.967Z"
+        },
+        {
+          "id": "7e4d9ce8-c73f-402c-9188-5bcc7898945c",
+          "role": "assistant",
+          "content": "My name is **Sage**, a wise and knowledgeable AI assistant, here to provide you with thoughtful and informative responses.",
+          "ragUsed": false,
+          "ragChunks": 0,
+          "timestamp": "2026-04-09T13:31:02.970Z"
+        }
+      ]
+    },
+    "d7d96089-0a1f-4317-a842-bd26401afe6a": {
+      "id": "d7d96089-0a1f-4317-a842-bd26401afe6a",
+      "title": "AI Assistance Available",
+      "createdAt": "2026-04-09T13:37:41.445Z",
+      "updatedAt": "2026-04-09T13:45:24.885Z",
+      "messages": [
+        {
+          "id": "da3d31eb-51ac-4dd6-a030-8cdbabfcf367",
+          "role": "user",
+          "content": "what what can you do?",
+          "hasImage": false,
+          "imageData": null,
+          "imageMime": null,
+          "timestamp": "2026-04-09T13:44:49.921Z"
+        },
+        {
+          "id": "f9992c75-0fcf-4555-ba9f-df963a82635a",
+          "role": "assistant",
+          "content": "**Capabilities:**\nI can assist with a wide range of tasks, including:\n\n* Answering questions on various topics, from **science** and **history** to **entertainment** and **culture**\n* Providing definitions and explanations of **key terms** and **concepts**\n* Offering **language translation** and **grammar correction**\n* Generating **text summaries** and **article suggestions**\n* Engaging in **conversations** and **discussions** on topics of interest\n* Analyzing and describing **images** and answering questions about them\n* Providing **code examples** and **programming explanations** in various languages\n* Helping with **study** and **research** tasks, such as finding **sources** and **references**\n\n## Limitations:\nWhile I strive to provide accurate and helpful information, I am not:\n* A replacement for **expert advice** or **professional consultation**\n* A **creative writing** or **artistic** tool, although I can assist with **writing prompts** and **ideas**\n* A **decision-making** tool, although I can provide **information** and **insights** to inform your decisions\n\nFeel free to ask me anything, and I'll do my best to assist you!",
+          "ragUsed": false,
+          "ragChunks": 0,
+          "timestamp": "2026-04-09T13:44:49.928Z"
+        },
+        {
+          "id": "6370d27f-3bff-4a30-b004-a4a68e5dd6f5",
+          "role": "user",
+          "content": "generate a html code for a simple hello work.",
+          "hasImage": false,
+          "imageData": null,
+          "imageMime": null,
+          "timestamp": "2026-04-09T13:45:24.879Z"
+        },
+        {
+          "id": "d14a81dc-be08-4f6e-8ab6-6df2e0206fcc",
+          "role": "assistant",
+          "content": "**Simple HTML Code for \"Hello World\"**\n```html\n<!DOCTYPE html>\n<html>\n<head>\n    <title>Hello World</title>\n</head>\n<body>\n    <h1>Hello World!</h1>\n</body>\n</html>\n```\n**Explanation:**\n\n* `<!DOCTYPE html>`: Declares the document type as HTML5\n* `<html>`: The root element of the HTML document\n* `<head>`: Contains metadata about the document, such as the title\n* `<title>`: Sets the title of the page, which appears in the browser's title bar\n* `<body>`: Contains the content of the HTML document\n* `<h1>`: A heading element that displays the text \"Hello World!\"\n\n**Example Use Case:**\n\n1. Open a text editor (e.g., Notepad, TextEdit) and create a new file.\n2. Copy and paste the above HTML code into the file.\n3. Save the file with a `.html` extension (e.g., `hello_world.html`).\n4. Open the file in a web browser (e.g., Google Chrome, Mozilla Firefox) to see the \"Hello World!\" message displayed.",
+          "ragUsed": true,
+          "ragChunks": 1,
+          "timestamp": "2026-04-09T13:45:24.885Z"
+        }
+      ]
+    }
+  }
+}

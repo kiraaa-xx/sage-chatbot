@@ -1,10 +1,8 @@
-```
 # 🌿 Sage — AI Chat Assistant (v2)
 
 > Full-stack AI chat: Llama 4 Scout Vision + RAG + Supabase Auth + Font Awesome + Intro Animation + Favicon
 
 ---
-
 ## 🔧 Vision Model Update
 - **Old model:** llama-3.2-11b-vision-preview  
 - **New model:** meta-llama/llama-4-scout-17b-16e-instruct  
